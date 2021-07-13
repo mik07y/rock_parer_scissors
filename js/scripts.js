@@ -1,3 +1,7 @@
+/**
+ * Function that determinate bot's choice
+ * @returns computerSelection between Rock Paper and Scissors
+ */
 function computerPlay() {
     let randNum
     let computerSelection
@@ -16,7 +20,16 @@ function computerPlay() {
     }
     return computerSelection;
 }
-
+/**
+ * Function that play the round and determinate the round's winner
+ * @param  {} playerSelection
+ * @param  {} computerSelection
+ * @returns result
+ * Returns: Win if player won the rounf
+ *          Lose if player lost the round
+ *          Draw if it's a draw
+ *          Invalid player choice if che choice is invalid
+ */
 function playRound(playerSelection, computerSelection) {
     let actualChoice
     let result
@@ -44,6 +57,15 @@ function playRound(playerSelection, computerSelection) {
     return result
 }
 
+/**
+ * Function that determinate who won the matc
+ * @param  {} playerScore
+ * @param  {} botScore
+ * @returns winner
+ * Returns: Player if player won
+ *          Bot if bot won
+ *          Draw if it's a draw
+ */
 function getTheWinner(playerScore, botScore) {
 
     if (playerScore > botScore) {
@@ -57,6 +79,9 @@ function getTheWinner(playerScore, botScore) {
     return winner
 }
 
+/**
+ * Function that allow's player to play Rock paper and scissors
+ */
 function game() {
     let roundCounter = 0
     let playerScore = 0
